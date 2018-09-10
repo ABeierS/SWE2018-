@@ -1,0 +1,5 @@
+[
+  "test_rle.py::test_simpel",
+  "test_rle.py::test_simple_t",
+  "test_rle.py::test_advanced_t"
+]

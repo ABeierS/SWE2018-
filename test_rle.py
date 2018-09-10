@@ -1,10 +1,18 @@
 from rle import rle_encoder
+from rle import rle_decoder
 
-def test_simple():
-    assert rle_encoder("bbbkkka") == "b3k3a1"
-def test_advanced():
-    assert rle_encoder("ffffiiiiiaaa") == "f4i5a3"
-def test_numbers():
-    assert rle_encoder("11777599") == "12735192"
-def test_moreNumbers():
-    assert rle_encoder("1111111111111166") == "11462"
+def test_simpel():
+	assert rle_encoder("lllppp") == "l3p3"
+
+def test_simple_t():
+	txt_in = "bbbbkkk"
+	txt_out = "b4k3"
+	assert rle_encoder(txt_in) == txt_out
+	assert rle_decoder(txt_out) == txt_in
+
+def test_advanced_t():
+	txt_in = "bbbbkkk555"
+	txt_out = "b4k353"
+	assert rle_encoder(txt_in) == txt_out
+	assert rle_decoder(txt_out) == txt_in
+	
